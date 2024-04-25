@@ -36,6 +36,16 @@
           },
           "configurations": {
             "production": {
+              
+              "optimization": { 
+                "scripts": true, 
+                "styles": { 
+                 "minify": true, 
+                 "inlineCritical": false 
+                }
+               },
+
+
               "budgets": [
                 {
                   "type": "initial",
@@ -136,7 +146,8 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": false
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
