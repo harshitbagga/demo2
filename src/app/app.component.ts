@@ -286,8 +286,8 @@ export class AppComponent {
     );
     this.renderer.setStyle(participantGridItem1, 'borderRadius', '10px');
     // this.renderer.setStyle(participantGridItem1, 'height', '0');
-    this.renderer.setStyle(participantGridItem1, 'aspectRatio', 1.43 / 1);
-    this.renderer.setStyle(participantGridItem1, 'width', '400px');
+    this.renderer.setStyle(participantGridItem1, 'aspectRatio', 1.23 / 1);
+    this.renderer.setStyle(participantGridItem1, 'width', '250px');
     this.renderer.setStyle(participantGridItem1, 'marginTop', '8px');
     this.renderer.setStyle(participantGridItem1, 'display', 'flex');
     this.renderer.setStyle(participantGridItem1, 'alignItems', 'center');

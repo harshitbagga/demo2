@@ -15,20 +15,18 @@
 
 <ion-content id="button-div" >
 
-    <ion-button *ngIf="disableWebcamBtn" fill="outline" (click)="fireDisableWebcam()">
-      Disable Webcam
+    <ion-button *ngIf="disableWebcamBtn" fill="outline" (click)="fireDisableWebcam()" size="small">
+       Webcam off
     </ion-button>
-    <ion-button *ngIf="enableWebcamBtn" (click)="fireEnableWebcam()">
-      Enable Webcam
+    <ion-button *ngIf="enableWebcamBtn" (click)="fireEnableWebcam()" size="small">
+      Webcam on
     </ion-button>
-    <ion-button *ngIf="disableMicBtn" fill="outline" (click)="fireMuteMic()">
-      Disable Mic
-    </ion-button>
-    <ion-button *ngIf="enableMicBtn" (click)="fireUnmuteMic()">
-      Enable Mic
-    </ion-button>
-    <ion-button (click)="fireLeaveMeeting()" fill="clear" color="danger">
-      Leave Meeting
+    <ion-button *ngIf="disableMicBtn" fill="outline" (click)="fireMuteMic()" size="small">
+      Mic off
+    </ion-button><ion-button *ngIf="enableMicBtn" (click)="fireUnmuteMic()" size="small">
+    Mic On
+    </ion-button><ion-button (click)="fireLeaveMeeting()" fill="outline" color="danger" size="small">
+      End
     </ion-button>
   </ion-content>
 
