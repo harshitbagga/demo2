@@ -11,3 +11,7 @@ h1{
     width: 100%; /* Take full width of the viewport */
     z-index: 999; /* Optional: Adjust the z-index as needed */
   }
+  ion-button{
+    width: fit-content;
+    margin: auto;
+  }
