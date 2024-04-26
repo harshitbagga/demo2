@@ -59,6 +59,7 @@ npm install
   Ionic serve
   ```
 ## Ionic For Android
+<<<<<<< HEAD
 Running ==npm install -g @ionic/cli== installs the Ionic CLI globally on your system using Node Package Manager.
  ```js
   npm install -g @ionic/cli  # Installs both Ionic CLI and Capacitor
@@ -92,6 +93,14 @@ In summary, ==ionic capacitor link== android is a command used to establish the 
  
  
  
+=======
+ionic build --prod 
+ionic capacitor link android  
+npm install -g @ionic/cli  # Installs both Ionic CLI and Capacitor
+npm update -g @ionic/cli 
+ionic cap sync  
+ ionic capacitor run android --verbose
+>>>>>>> 29c7206c8e0680d70ff543d9dc7266da7b2b7738
 ## Key Concepts
 
 - `Meeting` - A Meeting represents Real time audio and video communication.
@@ -147,4 +156,8 @@ Token is used to create and validate a meeting using API and also initialise a m
 ## Community
 
 - [Discord](https://discord.gg/Gpmj6eCq5u) - To get involved with the Video SDK community, ask questions and share tips.
+<<<<<<< HEAD
 - [Twitter](https://twitter.com/video_sdk) - To receive updates, announcements, blog posts, and general Video SDK tips.
+=======
+- [Twitter](https://twitter.com/video_sdk) - To receive updates, announcements, blog posts, and general Video SDK tips.
+>>>>>>> 29c7206c8e0680d70ff543d9dc7266da7b2b7738
