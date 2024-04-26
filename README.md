@@ -1,5 +1,5 @@
 ![alt text](https://static.videosdk.live/videosdk_logo_website_black.png)
-# VideoSDK for Ionic + Angular Demo (For Web)
+# Video RTC demo Using Ionic + Capacitor Demo (For Web)
 
 [![Documentation](https://img.shields.io/badge/Read-Documentation-blue)](https://)
 [![Discord](https://img.shields.io/discord/876774498798551130?label=Join%20on%20Discord)](https://discord.gg/kgAvyxtTxv)
@@ -28,8 +28,8 @@ At Video SDK, we’re building tools to help companies create world-class collab
 Clone the repository to your local environment.
 
 ```js
-git clone https://github.com/videosdk-live/videosdk-rtc-Ionic-sdk-angular-example.git
-cd Ionic-VideoSDKdemo/
+git clone  https://github.com/videosdk-live/quickstart.git
+cd quickstart/ionic-rtc/demo2
 ```
 
 ### 2. Install the dependecies
@@ -98,8 +98,6 @@ In summary, 'ionic capacitor link' android is a command used to establish the ne
 - `Participant` - Participant represents someone who is attending the meeting's session, `local partcipant` represents self (You), for this self, other participants are `remote participants`.
 - `Stream` - Stream means video or audio media content that is either published by `local participant` or `remote participants`.
 
-
-
 ## Token Generation
 
 Token is used to create and validate a meeting using API and also initialise a meeting.
@@ -112,6 +110,127 @@ Token is used to create and validate a meeting using API and also initialise a m
 
 - For production, you have to set up an authentication server to authorize users. Follow our official example repositories to setup authentication server, [videosdk-rtc-api-server-examples](https://github.com/videosdk-live/videosdk-rtc-api-server-examples)
 
+
+
+## API: Create and Validate meeting
+
+- `create meeting` - Please refer this [documentation](https://docs.videosdk.live/api-reference/realtime-communication/create-room) to create meeting.
+- `validate meeting`- Please refer this [documentation](https://docs.videosdk.live/api-reference/realtime-communication/validate-room) to validate the meetingId.
+
+
+
+## [Initialize a Meeting](https://docs.videosdk.live/javascript/api/sdk-reference/initMeeting#initmeeting)
+
+```js
+const meeting = VideoSDK.initMeeting({
+  meetingId: "abc-1234-xyz",
+  name: "John Doe",
+  micEnabled: true,
+  webcamEnabled: true,
+  maxResolution: "hd",
+});
+```
+
+
+
+## [Mute/Unmute Local Audio](https://docs.videosdk.live/javascript/guide/video-and-audio-calling-api-sdk/handling-media/mute-unmute-mic)
+
+```js
+// unmute mic
+meeting.unmuteMic();
+
+// mute mic
+meeting.muteMic();
+```
+
+
+## [Enable/Disable Local Webcam](https://docs.videosdk.live/javascript/guide/video-and-audio-calling-api-sdk/handling-media/on-off-camera)
+
+```js
+// enable webcam
+meeting.enableCam();
+
+// disable webcam
+meeting.disableCam();
+```
+
+
+
+## [Leave or End Meeting](https://docs.videosdk.live/javascript/guide/video-and-audio-calling-api-sdk/setup-call/leave-end-meeting)
+
+```js
+// Only one participant will leave/exit the meeting; the rest of the participants will remain.
+meeting.leave();
+
+// The meeting will come to an end for each and every participant. So, use this function in accordance with your requirements.
+meeting.end();
+```
+
+
+
+## [Listen for Meeting Events](https://docs.videosdk.live/javascript/guide/video-and-audio-calling-api-sdk/get-notified/meeting-events)
+
+By registering callback handlers, VideoSDK sends callbacks to the client app whenever there is a change or update in the meeting after a user joins.
+
+```js
+meeting.on("meeting-joined", () => {
+  // This event will be emitted when a localParticipant(you) successfully joined the meeting.
+});
+
+meeting.on("meeting-left", () => {
+  // This event will be emitted when a localParticipant(you) left the meeting.
+  // [errorMsg]: It will have the message if meeting was left due to some error like Network problem
+});
+
+meeting.on("participant-joined", (participant) => {
+  // This event will be emitted when a new participant joined the meeting.
+  // [participant]: new participant who joined the meeting
+});
+
+meeting.on("participant-left", (participant) => {
+  // This event will be emitted when a joined participant left the meeting.
+  // [participantId]: id of participant who left the meeting
+});
+```
+
+
+
+## [Listen for Participant Media Events](https://docs.videosdk.live/javascript/guide/video-and-audio-calling-api-sdk/get-notified/media-events)
+
+By registering callback handlers, VideoSDK sends callbacks to the client app whenever a participant's video, audio, or screen share stream is enabled or disabled.
+
+```js
+participant.on("stream-enabled", (stream) => {
+  // This event will be triggered whenever a participant's video, audio or screen share stream is enabled.
+});
+
+participant.on("stream-disabled", (stream) => {
+  // This event will be triggered whenever a participant's video, audio or screen share stream is disabled.
+});
+```
+
+If you want to learn more about the SDK, read the Complete Documentation of [Javascript VideoSDK](https://docs.videosdk.live/javascript/guide/video-and-audio-calling-api-sdk/concept-and-architecture)
+
+
+
+## Examples
+
+- [Prebuilt SDK Examples](https://github.com/videosdk-live/videosdk-rtc-prebuilt-examples)
+- [JavaScript SDK Example](https://github.com/videosdk-live/videosdk-rtc-javascript-sdk-example)
+- [React JS SDK Example](https://github.com/videosdk-live/videosdk-rtc-react-sdk-example)
+- [React Native SDK Example](https://github.com/videosdk-live/videosdk-rtc-react-native-sdk-example)
+- [Flutter SDK Example](https://github.com/videosdk-live/videosdk-rtc-flutter-sdk-example)
+- [Android SDK Example](https://github.com/videosdk-live/videosdk-rtc-android-java-sdk-example)
+- [iOS SDK Example](https://github.com/videosdk-live/videosdk-rtc-ios-sdk-example)
+
+## Documentation
+
+[Read the documentation](https://docs.videosdk.live/) to start using VideoSDK.
+
+## Community
+
+- [Discord](https://discord.gg/Gpmj6eCq5u) - To get involved with the Video SDK community, ask questions and share tips.
+- [Twitter](https://twitter.com/video_sdk) - To receive updates, announcements, blog posts, and general Video SDK tips.
 
 ## Examples
 
