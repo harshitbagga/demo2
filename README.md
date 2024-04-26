@@ -59,7 +59,7 @@ npm install
   Ionic serve
   ```
 ## Ionic For Android
-Running ==npm install -g @ionic/cli== installs the Ionic CLI globally on your system using Node Package Manager.
+Running ('npm install -g @ionic/cli') installs the Ionic CLI globally on your system using Node Package Manager.
  ```js
   npm install -g @ionic/cli  # Installs both Ionic CLI and Capacitor
   ```
