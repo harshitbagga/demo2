@@ -59,7 +59,6 @@ npm install
   Ionic serve
   ```
 ## Ionic For Android
-<<<<<<< HEAD
 Running ==npm install -g @ionic/cli== installs the Ionic CLI globally on your system using Node Package Manager.
  ```js
   npm install -g @ionic/cli  # Installs both Ionic CLI and Capacitor
