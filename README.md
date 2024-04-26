@@ -99,7 +99,7 @@ npm install -g @ionic/cli  # Installs both Ionic CLI and Capacitor
 npm update -g @ionic/cli 
 ionic cap sync  
  ionic capacitor run android --verbose
->>>>>>> 29c7206c8e0680d70ff543d9dc7266da7b2b7738
+
 ## Key Concepts
 
 - `Meeting` - A Meeting represents Real time audio and video communication.
