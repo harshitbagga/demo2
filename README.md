@@ -16,7 +16,6 @@ At Video SDK, we’re building tools to help companies create world-class collab
 - Get familiarized with [Token](https://docs.videosdk.live/flutter/guide/video-and-audio-calling-api-sdk/server-setup)
 
 
-
 ### Prerequisites
 
 - Valid [Video SDK Account](https://app.videosdk.live/signup)
@@ -59,7 +58,7 @@ npm install
   Ionic serve
   ```
 ## Ionic For Android
-Running ('npm install -g @ionic/cli') installs the Ionic CLI globally on your system using Node Package Manager.
+Running 'npm install -g @ionic/cli' installs the Ionic CLI globally on your system using Node Package Manager.
  ```js
   npm install -g @ionic/cli  # Installs both Ionic CLI and Capacitor
   ```
@@ -69,36 +68,25 @@ If the Ionic CLI and Capacitor are already installed, you'll need to update them
   npm update -g @ionic/cli 
   ```
   
-In summary, ==ionic capacitor link== android is a command used to establish the necessary connections and configurations between your Ionic project and the Android platform
+In summary, 'ionic capacitor link' android is a command used to establish the necessary connections and configurations between your Ionic project and the Android platform
    ```js
   ionic capacitor link android 
   ```
   
-  The purpose of running ==ionic cap sync== is to synchronize the web assets of your Ionic project with the native project created by Capacitor.
+  The purpose of running 'ionic cap sync' is to synchronize the web assets of your Ionic project with the native project created by Capacitor.
   ```js
  ionic cap sync 
   ```
- ==Ionic capacitor run android== command is used to build and deploy your Ionic project to an Android device or emulator using Capacitor. However
-==--verbose== flag allows you to get more detailed information during the build and deployment process.
+ 'Ionic capacitor run android' command is used to build and deploy your Ionic project to an Android device or emulator using Capacitor. However
+'--verbose' flag allows you to get more detailed information during the build and deployment process.
 ```js
  ionic capacitor run android --verbose
   ```
-  Running ==ionic build --prod== initiates the production build process for your Ionic application.
-  The ==--prod== flag triggers various optimizations to reduce the size of your application's files and improve its performance. This typically includes minification of JavaScript, CSS, and HTML files, as well as tree shaking to remove any unused code. 
+  Running 'ionic build --prod' initiates the production build process for your Ionic application.
+  The '--prod' flag triggers various optimizations to reduce the size of your application's files and improve its performance. This typically includes minification of JavaScript, CSS, and HTML files, as well as tree shaking to remove any unused code. 
   ```js
  ionic build --prod
   ```
-
- 
- 
- 
-=======
-ionic build --prod 
-ionic capacitor link android  
-npm install -g @ionic/cli  # Installs both Ionic CLI and Capacitor
-npm update -g @ionic/cli 
-ionic cap sync  
- ionic capacitor run android --verbose
 
 ## Key Concepts
 
@@ -123,8 +111,6 @@ Token is used to create and validate a meeting using API and also initialise a m
 🌐 `Production Environment`:
 
 - For production, you have to set up an authentication server to authorize users. Follow our official example repositories to setup authentication server, [videosdk-rtc-api-server-examples](https://github.com/videosdk-live/videosdk-rtc-api-server-examples)
-
-
 
 
 ## Examples
@@ -155,8 +141,8 @@ Token is used to create and validate a meeting using API and also initialise a m
 ## Community
 
 - [Discord](https://discord.gg/Gpmj6eCq5u) - To get involved with the Video SDK community, ask questions and share tips.
-<<<<<<< HEAD
+
 - [Twitter](https://twitter.com/video_sdk) - To receive updates, announcements, blog posts, and general Video SDK tips.
-=======
+
 - [Twitter](https://twitter.com/video_sdk) - To receive updates, announcements, blog posts, and general Video SDK tips.
->>>>>>> 29c7206c8e0680d70ff543d9dc7266da7b2b7738
+
